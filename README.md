@@ -12,5 +12,5 @@ npm install
 ## Launch
 
 ~~~
-npm run all
+npm run dev
 ~~~
