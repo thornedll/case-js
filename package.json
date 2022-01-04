@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "bpmn-js": "^8.8.3",
+    "chor-js": "^0.7.1",
     "diagram-js": "^5.0.0",
     "jquery": "^3.3.1"
   }

@@ -19,17 +19,32 @@ export default class CustomPalette {
   
         create.start(event, shape);
       }
+
+      // function createTest(event) {
+      //   const shape = elementFactory.createShape({ type: 'bpmn:Test' });
+  
+      //   create.start(event, shape);
+      // }
   
       return {
         'create.service-task': {
           group: 'activity',
           className: 'bpmn-icon-service-task',
-          title: translate('Create ServiceTask'),
+          title: translate('Создать задачу вызова сервиса'),
           action: {
             dragstart: createServiceTask,
             click: createServiceTask
           }
         },
+        // 'create.test': {
+        //   group: 'activity',
+        //   className: 'bpmn-icon-transaction',
+        //   title: translate('Создать тестовый элемент'),
+        //   action: {
+        //     dragstart: createTest,
+        //     click: createTest
+        //   }
+        // }
       }
     }
   }

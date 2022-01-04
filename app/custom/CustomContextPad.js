@@ -34,6 +34,22 @@ export default class CustomContextPad {
     
         create.start(event, shape, element);
       }
+
+      // function appendTest(event, element) {
+      //   if (autoPlace) {
+      //     const shape = elementFactory.createShape({ type: 'bpmn:Test' });
+    
+      //     autoPlace.append(element, shape);
+      //   } else {
+      //     appendTestStart(event, element);
+      //   }
+      // }
+  
+      // function appendTestStart(event) {
+      //   const shape = elementFactory.createShape({ type: 'bpmn:Test' });
+    
+      //   create.start(event, shape, element);
+      // }
   
       return {
         'append.service-task': {
@@ -44,7 +60,16 @@ export default class CustomContextPad {
             click: appendServiceTask,
             dragstart: appendServiceTaskStart
           }
-        }
+        },
+        // 'append.test': {
+        //   group: 'model',
+        //   className: 'bpmn-icon-transaction',
+        //   title: translate('Присоединить тестовый элемент'),
+        //   action: {
+        //     click: appendTest,
+        //     dragstart: appendTestStart
+        //   }
+        // }
       };
     }
   }

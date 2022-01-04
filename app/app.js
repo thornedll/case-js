@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 import BpmnModeler from '../modules/bpmn-js/lib/Modeler';
+// import ChorJS from '../modules/chor-js/lib/Modeler';
 
 // import customRendererModule from './custom';
 import customControlsModule from './custom';
@@ -14,7 +15,10 @@ var modeler = new BpmnModeler({
   additionalModules: [
     // customRendererModule,
     customControlsModule
-  ]
+  ],
+  keyboard: {
+    bindTo: document
+  }
 });
 
 function createNewDiagram() {
